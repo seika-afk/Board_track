@@ -1,13 +1,12 @@
-use axum::{Json,response::IntoResponse};
-use serde_json::{json};
+use axum::{Json, response::IntoResponse};
+use serde_json::json;
 
-pub async fn hello_world()->impl IntoResponse{
+pub async fn hello_world() -> impl IntoResponse {
+    let json_response = json!({
 
-let json_response= json!({
+        "status" : "ok",
+        "message" : "Hello_world"
 
-    "status" : "ok",
-    "message" : "Hello_world"
-
-});
+    });
     Json(json_response)
 }
