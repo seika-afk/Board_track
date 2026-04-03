@@ -10,6 +10,9 @@ use sqlx::{PgPool, postgres::PgPoolOptions};
 pub struct AppState {
     db: PgPool,
 }
+
+
+
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     dotenv()?;
